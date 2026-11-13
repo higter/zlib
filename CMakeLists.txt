@@ -7,6 +7,10 @@ project(
     HOMEPAGE_URL "https://zlib.net/"
     DESCRIPTION "a general-purpose lossless data-compression library")
 
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    # 将下面的路径替换为你想要的默认安装目录
+    set(CMAKE_INSTALL_PREFIX "../../../install/zlib" CACHE PATH "Default install prefix" FORCE)
+endif()
 # ============================================================================
 # CPack
 # ============================================================================
